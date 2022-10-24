@@ -17,7 +17,11 @@ public class Calculator {
         } else if (mathOperation == '+') {
             System.out.println(num1 + num2);
         } else if (mathOperation == '/') {
-            System.out.println(num1 / num2);
+            try {
+                System.out.println(num1 / num2);
+            } catch (ArithmeticException e) {
+                System.out.println(e.getMessage());
+            }
         } else if (mathOperation == '*') {
             System.out.println(num1 * num2);
         }
